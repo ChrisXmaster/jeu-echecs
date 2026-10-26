@@ -1,0 +1,47 @@
+.piece {
+  font-size: 3.5rem;
+  user-select: none;
+  touch-action: none;
+  transition: transform 0.1s ease;
+  z-index: 10;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.piece.dragging {
+  cursor: grabbing !important;
+  z-index: 1000;
+  transform: scale(1.1);
+}
+
+.piece:active {
+  cursor: grabbing;
+}
+
+.piece.white {
+  color: #ffffff;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.piece.black {
+  color: #000000;
+  text-shadow: 
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff,
+    0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .piece {
+    font-size: 2.5rem;
+  }
+}
